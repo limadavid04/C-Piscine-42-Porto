@@ -27,7 +27,7 @@ void	rush(int x, int y)
 		{
 			if (h != 0 && h != y - 1 && (c == 0 || c == x -1))
 				ft_putchar('B');
-			else if ((c == 0 && h == 0) || (h == y - 1 && c == x -1 /*&& y > 1 && x > 1*/))
+			else if ((c == 0 && h == 0) || (h == y - 1 && c == x -1 && y > 1 && x > 1))
 				ft_putchar('A');
 			else if ((c == x - 1 && h == 0) || (h == y - 1 && c == 0))
 				ft_putchar('C');
