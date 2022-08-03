@@ -6,7 +6,7 @@
 /*   By: dlima <dlima@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/08/01 15:02:47 by dlima             #+#    #+#             */
-/*   Updated: 2022/08/02 11:14:00 by dlima            ###   ########.fr       */
+/*   Updated: 2022/08/02 16:55:44 by dlima            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -42,7 +42,7 @@ int	count_sep(char *sep, int size)
 	return (i * (size - 1));
 }
 
-int	populate_sep(char *str, char *sep, int i, int len)
+int	populate_sep(char *str, char *sep, int len)
 {
 	int	x;
 
@@ -74,7 +74,7 @@ char	*populate_strs(char *str, char **strs, int size, char *sep)
 			len++;
 		}
 		if (i < (size -1))
-			len = populate_sep(str, sep, i, len);
+			len = populate_sep(str, sep, len);
 		if (i == size -1)
 			str[len] = '\0';
 		i++;
@@ -88,7 +88,10 @@ char	*ft_strjoin(int size, char **strs, char *sep)
 	char	*str;
 
 	if (size == 0)
-		return (0);
+	{
+		str = malloc(1);
+		return (str);
+	}
 	total = count_sep(sep, size) + count_chars(strs, size);
 	str = (char *)malloc(total * sizeof(char) + 1);
 	return (populate_strs(str, strs, size, sep));
@@ -98,7 +101,6 @@ int main()
 {
     char *strs[6] = {"david", "ferreira", "sousa", "lima", "joao", "joel"};
     char *sep = "-+-";
-    printf("%s\n", ft_strjoin(6, strs, sep));
+    printf("%s\n", ft_strjoin(0, strs, sep));
 }
-//meter null char no fim da str pq quando faco cat -e da caracteres estranhos
 */

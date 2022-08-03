@@ -6,19 +6,19 @@
 /*   By: dlima <dlima@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/07/28 17:08:57 by dlima             #+#    #+#             */
-/*   Updated: 2022/07/28 17:12:11 by dlima            ###   ########.fr       */
+/*   Updated: 2022/08/02 16:51:07 by dlima            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include <stdlib.h>
 #include <stdio.h>
 
-int *ft_range(int min, int max)
+int	*ft_range(int min, int max)
 {
 	int	n;
 	int	i;
 	int	*ptr;
-	
+
 	n = max - min;
 	if (n == 0 || n < 0)
 	{
@@ -37,7 +37,7 @@ int *ft_range(int min, int max)
 		}
 		return (ptr);
 	}
-} 
+}
 /*
 int	main()
 {
