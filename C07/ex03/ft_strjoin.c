@@ -100,7 +100,7 @@ char	*ft_strjoin(int size, char **strs, char *sep)
 int main()
 {
     char *strs[6] = {"david", "ferreira", "sousa", "lima", "joao", "joel"};
-    char *sep = "-+-";
-    printf("%s\n", ft_strjoin(0, strs, sep));
+    char *sep = "--";
+    printf("%s\n", ft_strjoin(6, strs, sep));
 }
 */
